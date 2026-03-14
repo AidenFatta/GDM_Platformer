@@ -1,22 +1,38 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI healthText;
     public TextMeshProUGUI scoreText;
-    private PlayerController player;
+    public TextMeshProUGUI gameOverScoreText;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void OnEnable()
     {
-        player = GameObject.FindAnyObjectByType<PlayerController>();
+        GameManager.Instance.OnHealthChanged += UpdateHealth;
+        GameManager.Instance.OnScoreChanged += UpdateScore;
+        GameManager.Instance.OnGameOver += HandleGameOver;
+    }
+    private void OnDisable()
+    {
+        GameManager.Instance.OnHealthChanged -= UpdateHealth;
+        GameManager.Instance.OnScoreChanged -= UpdateScore;
+        GameManager.Instance.OnGameOver -= HandleGameOver;
+    }
+    private void UpdateHealth(int newHealth)
+    {
+        healthText.text = $"{newHealth}";
+    }
+    private void UpdateScore(int newScore)
+    {
+        scoreText.text = $"{newScore}";
     }
 
-    // Update is called once per frame
-    void Update()
+    void HandleGameOver()
     {
-        healthText.text = $"{player.GetHealth()}";
-        scoreText.text = $"{player.GetScore()}";
+        PlayerPrefs.SetInt("FinalScore", GameManager.Instance.score);
+        SceneManager.LoadScene("GameOver");
     }
 }

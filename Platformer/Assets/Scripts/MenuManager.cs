@@ -5,7 +5,8 @@ public class MenuManager : MonoBehaviour
 {
    public void OnStartClick()
     {
-        SceneManager.LoadScene("GameScene");
+        GameManager.Instance.ResetGame();
+        SceneManager.LoadScene("GameScene");     
     }
 
     public void OnExitClick()
