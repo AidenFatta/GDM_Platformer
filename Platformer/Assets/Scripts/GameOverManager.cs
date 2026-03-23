@@ -14,8 +14,10 @@ public class GameOverManager : MonoBehaviour
 
     public void OnRetryClick()
     {
+        
         GameManager.Instance.ResetGame();
         SceneManager.LoadScene("GameScene");
+        CoinPoolManager.Instance.ResetAllCoins();
     }
 
     public void OnTitleClick()

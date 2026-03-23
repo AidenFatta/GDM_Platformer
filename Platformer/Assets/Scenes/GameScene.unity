@@ -169,6 +169,51 @@ Transform:
   - {fileID: 1164512852}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &87190183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 87190185}
+  - component: {fileID: 87190184}
+  m_Layer: 0
+  m_Name: CoinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &87190184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87190183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 685995227fef8494487a796011ce8ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinPrefab: {fileID: 9141292842581987520, guid: dd39414856d9387418be8b9af683c58a, type: 3}
+--- !u!4 &87190185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87190183}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &97130482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3419753214529471207, guid: dd39414856d9387418be8b9af683c58a, type: 3}
@@ -1355,6 +1400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthText: {fileID: 216535130}
   scoreText: {fileID: 2110713004}
+  gameOverScoreText: {fileID: 0}
 --- !u!1 &686752421
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,6 +3279,7 @@ SceneRoots:
   - {fileID: 173892295}
   - {fileID: 1645760872}
   - {fileID: 86647098}
+  - {fileID: 87190185}
   - {fileID: 147962334}
   - {fileID: 5411049742191157873}
   - {fileID: 1437223463}
