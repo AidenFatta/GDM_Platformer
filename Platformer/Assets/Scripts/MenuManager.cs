@@ -9,9 +9,18 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("GameScene");     
     }
 
+    public void OnScoreClick()
+    {
+        SceneManager.LoadScene("HighScore");
+    }
+
     public void OnExitClick()
     {
         Debug.Log("Exiting the game...");
         Application.Quit();
+    }
+    public void OnBackClick()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

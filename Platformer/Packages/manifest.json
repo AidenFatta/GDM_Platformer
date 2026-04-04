@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.github-glitchenzo.nugetforunity": "file:C:/Users/Sapph/Downloads/NuGetForUnity-master/NuGetForUnity-master/src/NuGetForUnity",
     "com.unity.cinemachine": "3.1.6",
     "com.unity.collab-proxy": "2.11.4",
     "com.unity.feature.2d": "2.0.1",
